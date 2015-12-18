@@ -1,6 +1,9 @@
 # Getting and Cleaning Data
-## Coursera Class - Johns Hopkins
-### Bloomberg School of Public Health
+
+
+
+### Coursera Class - Johns Hopkins Bloomberg School of Public Health
+
 #### Course Project - Data Scrubbing
 ---
 
