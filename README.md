@@ -41,13 +41,21 @@ The Class Project Requirements are as follows:
 
 The following _steps_ are performed within `run_analytics.R`
 - Housekeeping
-  - The data.table package is loaded _or_ installed if not found.
-  - A `R/` directory is created in the users home directory (`~/`), if none exists.
-  - The R working directory is then set to `~/R/`.
-  - The zipped data file is download if none exists in `~/R/`.
-  - The zipped data file is unziped if `~/R/UCI HAR Dataset/` is not found.
-  - The R working directory is then set to `~/R/UCI HAR Dataset/`.
-  - The data files are setup as R variables.
+ - The data.table package is loaded _or_ installed if not found.
+ - A `R/` directory is created in the users home directory (`~/`), if none exists.
+ - The R working directory is then set to `~/R/`.
+ - The zipped data file is download if none exists in `~/R/`.
+ - The zipped data file is unziped if `~/R/UCI HAR Dataset/` is not found.
+ - The R working directory is then set to `~/R/UCI HAR Dataset/`.
+ - The data files (listed above) are setup as R variables.
+
+- Housekeeping
+ - The `activity_labels.txt` file is read into a `data.table`. 
+   - This will be used to `join` with the main observation table.
+ - The `features.txt` file is read into a vector to form the bases for column headers.
+ - A `grep_columns` numeric vector is created in order to comply with Project Requirement #2.
+   - This will for the columns (`c(c1,c2,c3)`) to select in later `data.tables`.
+ - The interim `data.tables` are greated for both the _train_ing data and _test_ data.
 
 
 
