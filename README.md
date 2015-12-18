@@ -22,7 +22,7 @@ From this dataset, the data files used for _this_ analysis were the following:
 - y_test.txt
 - X_test.txt
 
-Note *none* of the detail files in "Inertial Signals/" were used.
+Note: *none* of the detail files in "Inertial Signals/" were used.
 
 ---
 
@@ -31,7 +31,7 @@ The following requirements are needed in order to run the R processing script, `
  - R Package data.tables
  - GNU `paste` command (available in *nix Operating Systems including OSX)
 
-The Class Project Requirements are as follows: 
+The Class Project Requirements (CPR) are as follows: 
 
 1. Merges the training and the test sets to create one data set.
 2. Extracts only the measurements on the mean and standard deviation for each measurement.
@@ -55,15 +55,15 @@ The following _steps_ are performed within `run_analytics.R`
  - The `activity_labels.txt` file is read into a `data.table`. 
    - This will be used to `join` with the main observation table.
  - The `features.txt` file is read into a vector to form the bases for column headers.
- - A `grep_columns` numeric vector is created in order to comply with Project Requirement #2.
+ - A `grep_columns` numeric vector is created in order to comply with CPR #2.
    - This will be used for column selection (`c(c1,c2,c3)`) in later `data.tables`.
 - Main Processing
  - The interim `data.tables` are greated for both the _train_ -ing data and _test_ data.
    - The steps performed here are to:
      - Paste the _Subject_,_Activity_ and _Observation_ data via GNU `paste` command.
-     - Change the Column/Variable/Feature names via `features.txt` file (Project Req. #4)
-     - Replace Activity number with Activity name to comply with Project Req. #3
-     - Select only measurements for the mean() and standard deviation (Project Req. #2)
- - The two interim `data.tables` are joined (`rbind`) to form one dataset (Project Req. #1)
- - Project Req. #5, tidy dataset, is created from the combined with mean() of each variable.
+     - Change the Column/Variable/Feature names via `features.txt` file (CPR #4)
+     - Replace Activity number with Activity name to comply with CPR #3
+     - Select only measurements for the mean() and standard deviation (CRP #2)
+ - The two interim `data.tables` are joined (`rbind`) to form one dataset (CPR #1)
+ - CPR #5, tidy dataset, is created from the combined with mean() of each variable.
  - This final data.table is written to disk as: `RClass03_Project.table`

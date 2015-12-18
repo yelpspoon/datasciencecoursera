@@ -21,7 +21,7 @@
 # D.Colon 2015.12.17
 #-------------------------------------------------------------------------------------------#
 
-# load the awesome data.table 
+# load the awesome data.table package
 if (!is.element('data.table', installed.packages()[,1]))
   install.packages('data.table', dep = TRUE)
 require(data.table) 
@@ -106,4 +106,4 @@ DT_Final<-rbind(DT_test, DT_train)
 DT_FinalTidy<-DT_Final[, lapply(.SD, mean), by=list(SubjectID,Activity)]
 
 ## Write to file for export
-write.table(DT_FinalTidy, file = "DColon_RClass03_Project.table", row.names = FALSE)
+write.table(DT_FinalTidy, file = "RClass03_Project.table", row.names = FALSE)
