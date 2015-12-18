@@ -19,7 +19,7 @@ From this dataset, the data files used for _this_ analysis were the following:
 - y_test.txt
 - X_test.txt
 
-_None_ of the detail files in "Inertial Signals/" were used.
+Note _none_ of the detail files in "Inertial Signals/" were used.
 ---
 
 The following requirements are needed in order to run the R processing script, `run_analysis.R`
