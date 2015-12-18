@@ -62,5 +62,5 @@ The following _steps_ are performed within `run_analytics.R`
      - Replace Activity number with Activity name to comply with Project Req. #3
      - Select only measurements for the mean() and standard deviation (Project Req. #2)
  - The two interim `data.tables` are joined (`rbind`) to form one dataset (Project Req. #1)
- - Project Req. #5, tidy dataset, is created from the combined data and written to disk.
-   - `RClass03_Project.table`
+ - Project Req. #5, tidy dataset, is created from the combined with mean() of each variable.
+ - This final data.table is written to disk as: `RClass03_Project.table`
