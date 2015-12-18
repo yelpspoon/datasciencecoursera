@@ -41,13 +41,13 @@ The Class Project Requirements are as follows:
 
 The following _steps_ are performed within `run_analytics.R`
 - Housekeeping
- -- The data.table package is loaded _or_ installed if not found.
- -- A `R/` directory is created in the users home directory (`~/`), if none exists.
- -- The R working directory is then set to `~/R/`.
- -- The zipped data file is download if none exists in `~/R/`.
- -- The zipped data file is unziped if `~/R/UCI HAR Dataset/` is not found.
- -- The R working directory is then set to `~/R/UCI HAR Dataset/`.
- -- The data files are setup as R variables.
+  - The data.table package is loaded _or_ installed if not found.
+  - A `R/` directory is created in the users home directory (`~/`), if none exists.
+  - The R working directory is then set to `~/R/`.
+  - The zipped data file is download if none exists in `~/R/`.
+  - The zipped data file is unziped if `~/R/UCI HAR Dataset/` is not found.
+  - The R working directory is then set to `~/R/UCI HAR Dataset/`.
+  - The data files are setup as R variables.
 
 
 
