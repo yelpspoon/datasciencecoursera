@@ -48,25 +48,19 @@ The following _steps_ are performed within `run_analytics.R`
  - The zipped data file is unziped if `~/R/UCI HAR Dataset/` is not found.
  - The R working directory is then set to `~/R/UCI HAR Dataset/`.
  - The data files (listed above) are setup as R variables.
-
 - Pre-Processing
  - The `activity_labels.txt` file is read into a `data.table`. 
    - This will be used to `join` with the main observation table.
  - The `features.txt` file is read into a vector to form the bases for column headers.
  - A `grep_columns` numeric vector is created in order to comply with Project Requirement #2.
    - This will be used for column selection (`c(c1,c2,c3)`) in later `data.tables`.
+- Main Processing
  - The interim `data.tables` are greated for both the _train_ -ing data and _test_ data.
    - The steps performed here are to:
      - Paste the _Subject_,_Activity_ and _Observation_ data via GNU `paste` command.
      - Change the Column/Variable/Feature names via `features.txt` file (Project Req. #4)
      - Replace Activity number with Activity name to comply with Project Req. #3
      - Select only measurements for the mean() and standard deviation (Project Req. #2)
-
-
-
-
-
-
-
-
-
+ - The two interim `data.tables` are joined (`rbind`) to form one dataset (Project Req. #1)
+ - Project Req. #5, tidy dataset, is created from the combined data and written to disk.
+   - `RClass03_Project.table`
