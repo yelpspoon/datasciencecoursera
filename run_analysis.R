@@ -66,7 +66,7 @@ col_hdr<-append(col_hdr, DT_feat[,V2])          ## Append Feature Names to vecto
 
 ## Create numeric vector subset of headers containing:
 ## Subject, Activity, Mean & Std Dev. columns for later grepping
-grep_columns<-c(1,2,grep("std|mean", col_hdr, ignore.case = TRUE)) 
+grep_columns<-c(1,2,grep("std|mean", col_hdr, ignore.case = TRUE))
 
 
 #----------------------------- Load Interim data.tables -------------------------------------#
